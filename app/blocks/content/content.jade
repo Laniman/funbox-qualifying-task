@@ -1,0 +1,6 @@
+include ../product/product
+
+mixin content(products)
+	+b.content&attributes(attributes)
+		each product in products
+			+product(product)
