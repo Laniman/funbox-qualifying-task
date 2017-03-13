@@ -1,5 +1,5 @@
 # Квалификационное практическое задание для разработчиков HTML/CSS от Funbox
-[![Build Status](https://travis-ci.org/Laniman/funbox-qualifying-task.svg?branch=master)](https://travis-ci.org/Laniman/funbox-qualifying-task)
+[![Lint Status](https://travis-ci.org/Laniman/funbox-qualifying-task.svg?branch=master)](https://travis-ci.org/Laniman/funbox-qualifying-task)
 
 Скачать тестовое задание целиком можно здесь: [https://dl.fun-box.ru/qt-htmlcss.zip](https://dl.fun-box.ru/qt-htmlcss.zip).
 
