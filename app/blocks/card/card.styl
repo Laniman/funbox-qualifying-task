@@ -89,21 +89,22 @@ disabled-theme = #b3b3b3
 		height 80px
 		font-size 21px
 		font-weight 400
+
 		color #ffffff
 		background-color main-theme
 		border-radius 50%
 
-		input:checked ~ .product__card .card &
+		^[0]_enabled:hover &
+			background-color main-theme-hover
+
+		^[0]_enabled^[0]_selected &
 			background-color main-theme-selected
 
-		^[0]_selected_hover &
-			background-color main-theme-selected-hover !important
+		^[0]_enabled^[0]_selected_hover &
+			background-color main-theme-selected-hover
 
 		^[0]_disabled &
 			background-color disabled-theme
-
-		^[0]_enabled:hover &
-			background-color main-theme-hover
 
 		span
 			font-size 42px
@@ -120,16 +121,15 @@ disabled-theme = #b3b3b3
 		background-image linear-gradient(135deg, transparent 5%, main-theme 0)
 		border-radius 0 10px 10px 10px
 
-		^[0]_disabled&
-			background-image linear-gradient(135deg, transparent 5%, disabled-theme 0)
-
 		^[0]_enabled^[0]:hover:before
 			background-image linear-gradient(135deg, transparent 5%, main-theme-hover 0)
 
-		^[0]_selected_hover&
-			background-image linear-gradient(135deg, transparent 5%, main-theme-selected-hover 0) !important
-
-		input:checked ~ .product__card &
+		^[0]_enabled^[0]_selected&
 			background-image linear-gradient(135deg, transparent 5%, main-theme-selected 0)
 
+		^[0]_enabled^[0]_selected_hover&
+			background-image linear-gradient(135deg, transparent 5%, main-theme-selected-hover 0)
+
+		^[0]_disabled&
+			background-image linear-gradient(135deg, transparent 5%, disabled-theme 0)
 

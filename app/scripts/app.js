@@ -8,6 +8,7 @@ $(() => {
 const cardClass = '.card';
 const productClass = '.product';
 const selectedHoverClass = 'card_selected_hover';
+const selectedClass = 'card_selected';
 
 const products = document.querySelectorAll(productClass);
 
@@ -22,10 +23,12 @@ function mouseleaveEventHandler() {
 		if (!input.checked) {
 			return;
 		}
+
 		this.classList.add(selectedHoverClass);
 	});
 	card.addEventListener('mouseleave', mouseleaveEventHandler);
 	input.addEventListener('change', () => {
+		card.classList.toggle(selectedClass);
 		card.classList.remove(selectedHoverClass);
 	});
 });

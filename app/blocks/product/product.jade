@@ -1,18 +1,18 @@
 include ../card/card
 
 mixin product(product)
-		if product.isAvailable
-			+b.product._enabled
-				+e('input').input(type='checkbox' id=product.id)
-				+e.card
-					+card(product)._enabled
-				+e.text_buy Чего сидишь? Порадуй котэ,
-					label(for=product.id) купи
-					|.
-				+e.text_info= product.footerText.selected
-		else
-			+b.product._disabled
-				+e('input').input(type='checkbox' id=product.id disabled)
-				+e.card
-					+card(product)._disabled
-				+e.text_disabled= product.footerText.disabled
+	if product.isAvailable
+		+b.product._enabled
+			+e('input').input(type='checkbox' id=product.id)
+			+e.card
+				+card(product)._enabled
+			+e.text_buy Чего сидишь? Порадуй котэ,
+				label(for=product.id) купи
+				|.
+			+e.text_info= product.footerText.selected
+	else
+		+b.product._disabled
+			+e('input').input(type='checkbox' id=product.id disabled)
+			+e.card
+				+card(product)._disabled
+			+e.text_disabled= product.footerText.disabled
